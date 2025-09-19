@@ -1,0 +1,14 @@
+.target-profile {
+    background-color: lightblue;
+    border: 2px solid black;
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+}
+
+.target-profile-image {
+    padding: 1rem;
+    background-color: grey;
+    position: relative;
+}
