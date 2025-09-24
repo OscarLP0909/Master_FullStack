@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>FORMULARIO</h1>
+
+    <main>
+        <section>
+            <h2>Registro</h2>
+
+            <!--FORM-->
+            <form id="reservation-form">
+
+                <label for="name">Nombre:*</label>
+                </label>
+                <input type="text" name="name" id="name" placeholder="Introduce tu nombre" required>
+
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" placeholder="Introduce tu Email" required>
+
+                <label for="reservation-calendar">Calendario de Reserva:</label>
+                <input type="date" name="calendar" id="calendar" required>
+
+                <button type="submit">Reservar</button>
+
+            </form>
+            <!--END FORM-->
+        </section>
+    </main>
+
+    <script>
+        const form = document.getElementById('reservation-form')
+
+        form.addEventListener('submit', function(event){
+
+            event.preventDefault();
+
+            // Obtener los datos de nuestro formulario para poder visualizarlos
+            const name = document.getElementById('name').value; 
+            const email= document.getElementById('email').value;
+            const calendar = document.getElementById('calendar').value;
+
+            console.log('Nombre: ', name);
+            console.log('Email: ', email);
+            console.log('Calendar: ', calendar);
+        });
+    </script>
+</body>
+</html>
