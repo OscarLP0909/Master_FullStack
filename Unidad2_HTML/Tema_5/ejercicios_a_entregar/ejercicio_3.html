@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tercer Ejercicio</title>
+</head>
+<body>
+    <header class="header">
+        <h1 class="header-title">Formulario de Reserva</h1>
+    </header>
+    <main class="main">
+        <section class="form-section">
+            <h2 class="form-section-title">Reserva</h2>
+            <form id="reservation-form">
+                <label for="name">Nombre:*</label>
+                <input type="text" name="name" id="name" placeholder="Introduce tu nombre" required>
+
+                <label for="apellidos">Apellidos:*</label>
+                <input type="text" name="apellidos" id="apellidos" placeholder="Introduce tus apellidos" required>
+
+                <label for="fecha-reserva">Fecha de Reserva:</label>
+                <input type="date" name="fecha-reserva" id="fecha-reserva" required>
+
+                <label for="checkbox">Aceptar términos y condiciones:</label>
+                <input type="checkbox" name="checkbox" id="checkbox" required>
+
+                <br>
+
+                <button type="submit">Reservar</button>
+            </form>
+        </section>
+    </main>
+    <script>
+        const form = document.getElementById('reservation-form');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const apellidos = document.getElementById('apellidos').value;
+            const fechaReserva = document.getElementById('fecha-reserva').value;
+            const checkbox = document.getElementById('checkbox').checked;
+
+            console.log('Nombre: ', name);
+            console.log('Apellidos: ', apellidos);
+            console.log('Fecha de Reserva: ', fechaReserva);
+            console.log('Términos y condiciones aceptados: ', checkbox);
+        });
+    </script>
+</body>
+</html>

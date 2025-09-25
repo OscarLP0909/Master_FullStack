@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Formulario de Países con Banderas</title>
+<style>
+    .custom-select-wrapper {
+    position: relative;
+    width: 300px;
+    }
+
+    .custom-select {
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    }
+
+    .selected-flag {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    }
+
+    .custom-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    border: 1px solid #ccc;
+    background-color: white;
+    z-index: 1000;
+    max-height: 200px;
+    overflow-y: auto;
+    display: none;
+    }
+
+    .custom-option {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    }
+
+    .custom-option:hover {
+    background-color: #f0f0f0;
+    }
+
+    img.flag {
+    width: 20px;
+    height: 15px;
+    border: 1px solid #ccc;
+    }
+</style>
+</head>
+<body>
+<header>
+    <h1>Formulario de Países</h1>
+</header>
+<main>
+    <section id="form-section">
+    <h2>Formulario Países</h2>
+    <form id="country-form">
+        <label for="custom-country">País:</label>
+        <div class="custom-select-wrapper">
+        <div class="custom-select" id="custom-country">
+            <div class="selected-flag" id="selected-flag">Selecciona un país</div>
+            <span>▼</span>
+        </div>
+        <div class="custom-options" id="country-options">
+            <!-- Las opciones se llenarán desde JavaScript -->
+        </div>
+        </div>
+        <input type="hidden" name="country" id="country-input" />
+
+        <br>
+
+        <label for="observations">Observaciones:</label>
+        <textarea name="observations" id="observations" rows="4" cols="50" required></textarea>
+
+        <button type="submit">Enviar</button>
+    </form>
+    </section>
+</main>
+
+<script>
+    const countries = [
+    { name: "España", flag: "https://flagcdn.com/es.svg" },
+    { name: "Francia", flag: "https://flagcdn.com/fr.svg" },
+    { name: "Italia", flag: "https://flagcdn.com/it.svg" },
+    { name: "Alemania", flag: "https://flagcdn.com/de.svg" },
+    { name: "Portugal", flag: "https://flagcdn.com/pt.svg" },
+    { name: "Reino Unido", flag: "https://flagcdn.com/gb.svg" }
+    ];
+
+    const optionsContainer = document.getElementById('country-options');
+    const selectedFlag = document.getElementById('selected-flag');
+    const countryInput = document.getElementById('country-input');
+    const customSelect = document.getElementById('custom-country');
+
+    // Crear opciones
+    countries.forEach(country => {
+    const option = document.createElement('div');
+    option.className = 'custom-option';
+    option.innerHTML = `
+        <img src="${country.flag}" alt="${country.name}" class="flag">
+        <span>${country.name}</span>
+    `;
+
+    option.addEventListener('click', () => {
+        selectedFlag.innerHTML = `<img src="${country.flag}" alt="${country.name}" class="flag"> ${country.name}`;
+        countryInput.value = country.name;
+        optionsContainer.style.display = 'none';
+    });
+
+    optionsContainer.appendChild(option);
+    });
+
+    // Mostrar/Ocultar opciones
+    customSelect.addEventListener('click', () => {
+    const display = optionsContainer.style.display;
+    optionsContainer.style.display = display === 'block' ? 'none' : 'block';
+    });
+
+    // Cerrar si se hace clic fuera
+    document.addEventListener('click', (e) => {
+    if (!customSelect.contains(e.target)) {
+        optionsContainer.style.display = 'none';
+    }
+    });
+</script>
+</body>
+</html>
