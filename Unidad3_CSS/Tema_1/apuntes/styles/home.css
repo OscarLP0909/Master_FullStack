@@ -1,0 +1,19 @@
+.info_content {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.purple {
+    background-color: #7B049C;
+}
+
+.pink {
+    background-color: #9C0474;
+}
+
+.content_text {
+    color: white;
+    font-size: 4rem;
+}
