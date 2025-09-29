@@ -1,0 +1,23 @@
+.info_content {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1E1E1E;
+}
+
+.box_title {
+    border-style: solid;
+    border-color: #ffe10050;
+    padding: 2rem;
+    margin: auto;
+    gap: 1rem;
+    width: 17rem;
+    border-radius: 4rem;
+    border-width: 0.4rem;
+    color: #ffe10065;
+    font-size: 2rem;
+    text-align: center;
+    font-family: 'Miriam CLM', sans-serif;
+}
+
