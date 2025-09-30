@@ -1,0 +1,22 @@
+.info_content {
+    background-color: #020202f1;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content_text {
+    color: white;
+    background-color: #222229;
+    border-style: solid;
+    border-width: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 3rem;
+    width: 23rem;
+    display: flex;
+    font-size: 3rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
