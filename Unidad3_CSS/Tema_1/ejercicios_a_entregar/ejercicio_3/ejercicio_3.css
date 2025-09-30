@@ -1,0 +1,33 @@
+.info {
+    height: 100vh;
+    background-color: #232323;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.info_content {
+    background-image: linear-gradient(#3470FA, #313ED7);
+    border-style: solid;
+    border-color: #100B94;
+    border-radius: 0.625rem;
+    border-width: 0.3125rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5rem;
+}
+
+.text_subtitle {
+    color: white;
+    font-size: 3rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, serif;
+}
+
+.img_icon {
+    width: 50px;
+    transform: rotate(-5deg);
+    margin-right: 2rem;
+    color: white;
+}
