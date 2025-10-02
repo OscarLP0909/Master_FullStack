@@ -11,8 +11,10 @@ body {
     font-family: 'Kantumruy Pro', sans-serif;
 }
 
-nav {
+.header-section {
     position: sticky;
+    top: 0;             /*se queda pegado arriba*/
+    z-index: 1000;      /* para que quede encima del resto */
 }
 
 /* Contenido Máximo de nuestra aplicación */
@@ -51,27 +53,10 @@ nav {
     font-size: 1.5rem;
 }
 
+/* SECCIONES */
+
 .section-one {
     padding: 6rem 0;
-}
-
-.btn-white {
-    border-radius: 2.5rem;
-    width: 6.25rem;
-    background-color: #D9D9D9;
-    color: #0B0614;
-    padding: 0.625rem;
-}
-
-.btn-black {
-    border-radius: 2.5rem;
-    width: 6.25rem;
-    background-color: #0B0614;
-    color: #D9D9D9;
-    padding: 0.625rem;
-    border-style: solid;
-    border-color: #D9D9D9;
-    margin-top: 1.25rem;
 }
 
 .column-left {
@@ -98,11 +83,11 @@ nav {
     gap: 2rem;
 }
 
-.section-two {
+.section-two { /* Para quitar bloques vacíos */
     padding: 6rem 0;
 }
 
-.section-three {
+.section-three { /* Para quitar bloques vacíos */
     padding: 6rem 0;
 }
 
@@ -111,18 +96,53 @@ nav {
     margin-bottom: 3rem; /* espacio debajo del título */
 }
 
-.section-three .columns-2 {
+.section-three .columns-2 { /* Vista Columnas en la seccion SERVICES */
     display: flex;
     justify-content: space-between;
     gap: 2rem;
 }
 
-.section-three .column-left {
+.section-three .column-left { /* Estilo de la columna izquierda de SERVICES */
     border-left: 0.25rem solid #D9D9D9;
     padding-left: 1rem;
 }
 
-.section-three .column-right {
+.section-three .column-right { /* Estilo de la columna derecha de SERVICES*/
     border-left: 0.25rem solid #D9D9D9;
     padding-left: 1rem;
+}
+
+/* BOTONES */
+
+.btn-white {
+    border-radius: 2.5rem;
+    width: 6.25rem;
+    background-color: #D9D9D9;
+    color: #0B0614;
+    padding: 0.625rem;
+    cursor: pointer;
+}
+
+.btn-white:hover {
+    background-color: beige;
+    box-shadow: 0 0 10px 2px #f1c40f;
+    color: #e74c3c;
+}
+
+.btn-black {
+    border-radius: 2.5rem;
+    width: 6.25rem;
+    background-color: #0B0614;
+    color: #D9D9D9;
+    padding: 0.625rem;
+    border-style: solid;
+    border-color: #D9D9D9;
+    margin-top: 1.25rem;
+    cursor: pointer;
+}
+
+.btn-black:hover {
+    background-color: beige;
+    box-shadow: 0 0 10px 2px #f1c40f;
+    color: #e74c3c;
 }
