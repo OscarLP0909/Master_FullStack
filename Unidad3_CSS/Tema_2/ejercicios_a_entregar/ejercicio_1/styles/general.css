@@ -1,0 +1,57 @@
+/* Recomendado hacer esto siempre que empezamos un proyecto */
+
+/* Normalmente, general.css es para cosas generales del estilo, mientras que el otro es para cosas más específicas*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenido Máximo de nuestra aplicación */
+.content-max{
+    width: 75rem; /* 1200px */
+    margin: 0 auto; /* Para que quede centrado*/
+}
+
+/* COLORS */
+.color-primary {
+    background-color: #0B0514;
+}
+
+.color-secundary {
+    background-color: #D9D9D9;
+}
+
+/* FONTS */
+.font-white {
+    color: white;
+}
+
+.font-black {
+    color: #0b0613;
+}
+
+.fs-title {
+    font-size: 8rem;
+}
+
+.fs-text {
+    font-size: 2.25rem;
+}
+
+.fs-info {
+    font-size: 1.5rem;
+}
+
+.column-left {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.btn {
+    border-radius: 2.5rem;
+    width: 6.25rem;
+    background-color: #D9D9D9;
+    color: #0B0614;
+}
