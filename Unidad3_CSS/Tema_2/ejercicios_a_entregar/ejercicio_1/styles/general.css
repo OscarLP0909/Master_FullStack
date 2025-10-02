@@ -11,6 +11,10 @@ body {
     font-family: 'Kantumruy Pro', sans-serif;
 }
 
+nav {
+    position: sticky;
+}
+
 /* Contenido Máximo de nuestra aplicación */
 .content-max{
     width: 75rem; /* 1200px */
@@ -47,11 +51,16 @@ body {
     font-size: 1.5rem;
 }
 
+.section-one {
+    padding: 6rem 0;
+}
+
 .btn-white {
     border-radius: 2.5rem;
     width: 6.25rem;
     background-color: #D9D9D9;
     color: #0B0614;
+    padding: 0.625rem;
 }
 
 .btn-black {
@@ -59,6 +68,10 @@ body {
     width: 6.25rem;
     background-color: #0B0614;
     color: #D9D9D9;
+    padding: 0.625rem;
+    border-style: solid;
+    border-color: #D9D9D9;
+    margin-top: 1.25rem;
 }
 
 .column-left {
@@ -67,10 +80,49 @@ body {
     justify-content: flex-start;
     align-items: flex-start;
     text-align: left;
+    margin-top: 1.25rem;
+}
+
+.column-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+    margin-top: 1.25rem;
 }
 
 .section-two .content-max{
     display: flex;
     justify-content: space-between;
     gap: 2rem;
+}
+
+.section-two {
+    padding: 6rem 0;
+}
+
+.section-three {
+    padding: 6rem 0;
+}
+
+.section-three .content__title {
+    text-align: center; /* título centrado */
+    margin-bottom: 3rem; /* espacio debajo del título */
+}
+
+.section-three .columns-2 {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.section-three .column-left {
+    border-left: 0.25rem solid #D9D9D9;
+    padding-left: 1rem;
+}
+
+.section-three .column-right {
+    border-left: 0.25rem solid #D9D9D9;
+    padding-left: 1rem;
 }
