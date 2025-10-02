@@ -1,0 +1,24 @@
+.content__title {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
+}
+
+.content__text {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.highlight {
+    background-color: #0B0614;
+    color: #D9D9D9;
+    width: 12.5rem;
+}
+
+
+.content__text::after {
+    content: " 🍒​";
+}
