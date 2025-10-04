@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Kantumruy Pro', sans-serif;
+}
+
+/* Contenido Máximo de nuestra aplicación */
+.content-max{
+    width: 75rem; /* 1200px */
+    margin: 0 auto; /* Para que quede centrado*/
+}
+
+.font-black {
+    color: #000000;
+}
+
+.font-grey {
+    color: #8F8F8F;
+}
+
+.font-white {
+    color: #F3F3F3;
+}
+
+.color-primary {
+    background-color: #616161;
+}
+
+.color-secundary {
+    background-color: #FFFFFF;
+}
+
+.fs-title {
+    font-size: 4.5rem;
+}
+
+.fs-subtitle {
+    font-size: 4rem;
+}
+
+.fs-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.header-section {
+    padding: 3.5rem 0;
+}
+
+.login-subtitle {
+    padding: 3rem 0;
+}
+
+.img-section {
+    padding: 3rem 0;
+}
