@@ -1,5 +1,8 @@
 .header-section {
     display: flex;
+    position: relative;
+    z-index: 1000;
+    top: 0;
 }
 
 .nav-title {
