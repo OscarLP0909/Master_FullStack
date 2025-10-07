@@ -1,0 +1,91 @@
+.faq_general {
+    display: flex;
+    justify-content: space-between;
+    background-color: #707070;
+    padding: 2rem;
+    gap: 2rem;
+    height: 100vh;
+
+    @media (max-width: 900px) {
+        flex-direction: column;
+    }
+}
+
+.faq_izq {
+    width: 70%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+    border-radius: 0.75rem;
+
+    @media (max-width: 900px) {
+        width: 100%;
+    }
+}
+
+.faq_right {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    border-radius: 0.75rem;
+
+    @media (max-width: 900px) {
+        width: 100%;
+    }
+}
+
+.faq_header {
+    margin-bottom: 2rem;
+}
+
+.faq_cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+
+.faq_card {
+    background-color: #3d3d3d;
+    border-radius: 8px;
+    width: 100%;
+    text-align: left;
+    overflow: hidden;
+}
+
+.card_title {
+    display: flex;
+    justify-content: space-between;
+    border: none;
+    background: #2a2a2a;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 1rem;
+    text-align: left;
+    width: 100%;
+}
+
+.card_subtitle {
+    display: flex;
+    justify-content: space-between;
+    border: none;
+    background: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 1rem;
+    text-align: left;
+    width: 100%;
+}
+
+.card_content {
+    padding: 1rem;
+    background-color: #2a2a2a;
+    color: aliceblue;
+}
