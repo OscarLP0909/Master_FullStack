@@ -14,6 +14,7 @@
 
 .column_left {
     width: 75%;
+    border: 1px solid rgb(51, 51, 51);
     border-style: solid;
     border-radius: 0.625rem;
     align-items: center;
@@ -27,6 +28,7 @@
 
 .column_right {
     width: 25%;
+    border: 1px solid rgb(51, 51, 51);
     border-style: solid;
     border-radius: 0.625rem;
     align-items: center;
@@ -52,4 +54,5 @@ button {
     padding: 0.4375rem;
     border-radius: 0.3125rem;
     border: none;
+    cursor: pointer;
 }
