@@ -10,17 +10,17 @@ body {
 
 /* FONTS */
 .header-title {
-    font-size: 3rem;
+    font-size: 2rem;
     color: white;
 }
 
 .header-subtitle {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     color: rgb(148, 148, 148);
 }
 
 .card-title {
-    font-size: 1.25rem;
+    font-size: 1rem;
     color: aliceblue;
 }
 
