@@ -2,3 +2,23 @@
     margin: 0;
     padding: 0;
 }
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header_title {
+    color: white;
+    font-size: 2rem;
+}
+
+.header_subtitle {
+    color: rgb(133, 133, 133);
+    margin-top: 0.3125rem;
+}
+
+.input_text {
+    background-color: rgb(26, 26, 26);
+    padding: 7px;
+    border-radius: 0.3125rem;
+}
