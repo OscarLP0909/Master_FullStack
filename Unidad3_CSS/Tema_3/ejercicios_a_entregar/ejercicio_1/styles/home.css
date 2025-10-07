@@ -1,3 +1,5 @@
+/* Estilo para la seccion */
+
 .faq_general {
     display: flex;
     justify-content: space-between;
@@ -10,6 +12,8 @@
         flex-direction: column;
     }
 }
+
+/* Estilo para la columna de la izquierda */
 
 .faq_izq {
     width: 70%;
@@ -25,6 +29,8 @@
     }
 }
 
+/* Estilo para la columna de la derecha */
+
 .faq_right {
     width: 30%;
     display: flex;
@@ -39,6 +45,7 @@
     }
 }
 
+/* Estilo para el header */
 .faq_header {
     margin-bottom: 2rem;
 }
@@ -50,6 +57,8 @@
     width: 100%;
 }
 
+/* Estilo para la card en general */
+
 .faq_card {
     background-color: #3d3d3d;
     border-radius: 8px;
@@ -57,6 +66,8 @@
     text-align: left;
     overflow: hidden;
 }
+
+/*Estilo para el div del titulo*/
 
 .card_title {
     display: flex;
@@ -71,6 +82,7 @@
     width: 100%;
 }
 
+/* Estilo para el div del subtitulo */
 .card_subtitle {
     display: flex;
     justify-content: space-between;
@@ -83,6 +95,8 @@
     text-align: left;
     width: 100%;
 }
+
+/* Estilo para el div con el contenido */
 
 .card_content {
     padding: 1rem;
