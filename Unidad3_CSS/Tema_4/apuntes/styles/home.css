@@ -1,0 +1,8 @@
+.accordion-button {
+    background-color: aquamarine;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: black;
+    color: azure;
+}
