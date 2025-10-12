@@ -1,0 +1,31 @@
+.pelis_container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 3.125rem;
+}
+
+#pelis {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+#series {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    align-items: center;
+    margin: 3.125rem;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+}
