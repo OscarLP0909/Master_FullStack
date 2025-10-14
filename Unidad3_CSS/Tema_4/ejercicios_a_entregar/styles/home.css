@@ -47,3 +47,19 @@ img {
     flex-flow: column wrap;
     align-items: stretch;
 }
+
+.btn-outline-primary {
+    color:rgb(0, 0, 0) !important;
+    background-color: rgb(255, 255, 255) !important;
+    border-color: var(--bs-btn-hover-border-color);
+}
+
+.btn-outline-primary:hover {
+    color:azure !important;
+    background-color: rgb(115, 87, 240) !important;
+    border-color: var(--bs-btn-hover-border-color);
+}
+
+.navbar {
+    background-color: rgb(217, 223, 243) !important;
+}
