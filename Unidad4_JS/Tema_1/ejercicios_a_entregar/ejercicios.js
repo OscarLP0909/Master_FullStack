@@ -38,20 +38,42 @@
 // Null
 
 
-let numEntero = 20
+// let numEntero = 20
 
-let numDecimal = 20.1
+// let numDecimal = 20.1
 
-let cadena = "Ejemplo"
+// let cadena = "Ejemplo"
 
-let boolean = false
+// let boolean = false
 
-let variable = null
+// let variable = null
 
 // 5. Usa console.log() para imprimir el tipo de cada variable utilizando typeof .
 
-console.log(typeof(numEntero))
-console.log(typeof(numDecimal))
-console.log(typeof(cadena))
-console.log(typeof(boolean))
-console.log(typeof(variableNull))
+// console.log(typeof(numEntero))
+// console.log(typeof(numDecimal))
+// console.log(typeof(cadena))
+// console.log(typeof(boolean))
+// console.log(typeof(variableNull))
+
+
+
+// 6. Declara una variable sin asignarle ningún valor y verifica su tipo
+
+// let sinValor;
+
+// console.log(typeof(sinValor)) // Undefined
+
+// let vacio = null;
+
+// console.log(typeof(vacio)) // object
+
+// Undefined se refiere a que una variable está sin valor, mientras que si se asigna null, sale que es de tipo objeto
+
+
+// 7. Declara dos variables x y y con valores 10 y 3 respectivamente.
+
+let x = 10
+let y = 3
+
+// 
