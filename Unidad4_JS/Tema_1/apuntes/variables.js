@@ -21,3 +21,11 @@ let string = "Hola" //String
 let string2 = "...." //String              Para JavaScript, un String es como un Array
 
 let string3 = "HOLA" // Para JavaScript no hay ninguna diferencia entres estos 3 Strings
+
+console.log(string === string2) // Sale falso debido a los ASCII
+
+let string4 = "Algo ha pasado con 'Lola' yo creo"
+
+let string5 = `Algo ha pasado con ${string2} creo`
+
+console.log(string5)
