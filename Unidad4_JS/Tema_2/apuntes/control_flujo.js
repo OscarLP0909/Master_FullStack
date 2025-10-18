@@ -17,33 +17,35 @@
 //     )
 
 
+// La sentencia Switch se utiliza para valores exactos, no rangos o condiciones booleanas
 
-// let pulsacion = 1
 
-// switch(pulsacion) {
-//     case 1:
-//         console.log("has pulsado 1")
-//         break;
-//     case 2:
-//         console.log("has pulsado 2")
-//         break;
-//     default:
-//         console.log("introduzca uno válido")
-// }
+let pulsacion = 1
+
+switch(pulsacion) {
+    case 1:
+        console.log("has pulsado 1")
+        break;
+    case 2:
+        console.log("has pulsado 2")
+        break;
+    default:
+        console.log("introduzca uno válido")
+}
 
 
 // Bucle For
 
-// for (let i = 0; i < 5; i++) {
-//     console.log(i)
-// }
+for (let i = 0; i < 5; i++) {
+    console.log(i)
+}
 
 
-// let contador = 0
-// while (contador < 5) {
-//     console.log("patata")
-//     contador++;
-// }
+let contador = 0
+while (contador < 5) {
+    console.log("patata")
+    contador++;
+}
 
 let array = ["paco", "maria", "lucia", "jose", "benito"]
 
