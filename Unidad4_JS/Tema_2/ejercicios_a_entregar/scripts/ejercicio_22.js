@@ -18,7 +18,7 @@ if (edad < 18) {
 
 let carnet = window.prompt(`¿Tiene carné de conducir?`)
 
-carnet.toLowerCase
+
 
 if (carnet === "no") {
     window.alert(`No puede alquilar porque no tiene carnet`)
