@@ -9,6 +9,6 @@ while (num > 0) {
         suma += i
     }
     window.alert(`La suma del 1 al ${num} es de ${suma}`)
-    num = window.prompt(`Vuelva a introducir otro número: `)
+    num = window.prompt(`Vuelva a introducir otro número (introduzca 0 si quiere salir): `)
 }
 
