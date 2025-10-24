@@ -12,7 +12,6 @@ Introduce la opción deseada:`))
 
 while (eleccionOp !== 7) {
     
-
     switch(eleccionOp){
         case 1:
             let num1Sum = Number(window.prompt(`Introduzca el primer número: `))
