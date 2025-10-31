@@ -6,12 +6,14 @@
 let ar = new Array(11).fill(0)
 let entrada = Number(window.prompt(`Introduzca entre 0 y 10 (negativo para terminar): `))
 
+
+
+
 while(entrada >= 0 && entrada <= 10) {
-    
-    // Si es nulo
-    if(entrada === null) {
+
+    if(entrada === null){
         break
-    }
+    } 
 
     // Pasarlo a Número
     const usuario = Number(entrada)
