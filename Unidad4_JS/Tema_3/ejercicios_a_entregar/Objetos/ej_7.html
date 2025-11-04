@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .contenedor {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .card {
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            padding: 10px;
+            width: 200px;
+            text-align: center;
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contenedor">
+        <div id="planeta1" class="card"></div>
+        <div id="planeta2" class="card"></div>
+        <div id="planeta3" class="card"></div>
+    </div>
+</body>
+    <script>
+        let sistemaSolar = {
+            mercurio: {
+                nombre: "mercurio",
+                color: "gris",
+                temperatura: 350,
+                imagen: "https://www.astromia.com/fotosolar/fotos/planetamercurio.jpg",
+            },
+            venus: {
+                nombre: "venus",
+                color: "blanco",
+                temperatura: 460,
+                imagen:
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Venus-real_color.jpg/220px-Venus-real_color.jpg",
+            },
+            tierra: {
+                nombre: "tierra",
+                color: "morado",
+                temperatura: 14,
+                imagen:
+                    "https://estaticos.muyinteresante.es/media/cache/760x570_thumb/uploads/images/article/5a0ab2a75bafe87f4d3f9a63/acaba-tiempo_0.jpg",
+            },
+            marte: {
+                nombre: "marte",
+                color: "rojo",
+                temperatura: -46,
+                imagen:
+                    "https://estaticos.muyinteresante.es/media/cache/760x570_thumb/uploads/images/article/55365b6b34099b0279c8fb2e/slide-marte.jpg",
+            },
+            jupiter: {
+                nombre: "jupiter",
+                color: "marrón",
+                temperatura: -121,
+                imagen:
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Jupiter_by_Cassini-Huygens.jpg/280px-Jupiter_by_Cassini-Huygens.jpg",
+            },
+            saturno: {
+                nombre: "saturno",
+                color: "amarillo",
+                temperatura: -130,
+                imagen:
+                    "https://estaticos.muyinteresante.es/media/cache/760x570_thumb/uploads/images/article/558d2b15010e26221b57df75/saturno.jpg",
+            },
+            urano: {
+                nombre: "urano",
+                color: "azul",
+                temperatura: -205,
+                imagen: "http://www.manzanares.es/v2/sites/paseo/img/urano/urano1.jpg",
+            },
+            neptuno: {
+                nombre: "neptuno",
+                color: "azul",
+                temperatura: -220,
+                imagen:
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Neptune_Full.jpg/280px-Neptune_Full.jpg",
+            },
+            pluton: {
+                nombre: "plutón",
+                color: "blanco",
+                temperatura: -229,
+                imagen:
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Nh-pluto-in-true-color_2x_JPEG.jpg/1200px-Nh-pluto-in-true-color_2x_JPEG.jpg",
+            },
+        };
+
+        // 7. Pedir al usuario tres nombres de planetas del Sistema Solar:
+        // Mostrar los datos de los tres planetas elegidos.
+        // Verificar que los nombres existen y no están repetidos.
+        // Los planetas aparecerán en el navegador en cards alineadas horizontalmente:
+        // Nombre arriba.
+        // Imagen en el centro.
+        // Características (color, temperatura) abajo.
+
+        // Pedimos al usuario los 3 planetas
+
+        let seleccion = [];
+
+        var planeta1 = window.prompt(`Introduzca el primer planeta: `).toLowerCase();
+        var planeta2 = window.prompt(`Introduzca el segundo planeta: `).toLowerCase();
+        var planeta3 = window.prompt(`Introduzca el tercer planeta: `).toLowerCase();
+
+        // Guardamos lo introducido en el array
+
+        seleccion.push(planeta1, planeta2, planeta3)
+
+        // Verificamos que exista en el objeto y que no haya repetidos
+
+        let existe1 = planeta1.toLowerCase() in sistemaSolar;
+        let existe2 = planeta2.toLowerCase() in sistemaSolar;
+        let existe3 = planeta3.toLowerCase() in sistemaSolar;
+
+        let hayRepetidos = new Set(seleccion).size !== seleccion.length;
+
+        if (hayRepetidos) {
+            alert(`Hay planetas repetidos`)
+        } else if (!existe1 || !existe2 || !existe3) {
+            alert(`Introduzca un planeta válido`)
+        } else {
+            let div1 = document.getElementById("planeta1")
+            let div2 = document.getElementById("planeta2")
+            let div3 = document.getElementById("planeta3")
+
+            div1.innerHTML = `<h1>${sistemaSolar[planeta1].nombre}</h1>
+            <img src="${sistemaSolar[planeta1].imagen}" alt="${planeta1}">
+            <p>Color: ${sistemaSolar[planeta1].color}</p>
+            <p>Temperatura: ${sistemaSolar[planeta1].temperatura} ºC</p>
+            `;
+
+            div2.innerHTML = `<h1>${sistemaSolar[planeta2].nombre}</h1>
+            <img src="${sistemaSolar[planeta2].imagen}" alt="${planeta2}">
+            <p>Color: ${sistemaSolar[planeta2].color}</p>
+            <p>Temperatura: ${sistemaSolar[planeta2].temperatura} ºC</p>
+            `;
+
+            div3.innerHTML = `<h1>${sistemaSolar[planeta3].nombre}</h1>
+            <img src="${sistemaSolar[planeta3].imagen}" alt="${planeta3}">
+            <p>Color: ${sistemaSolar[planeta3].color}</p>
+            <p>Temperatura: ${sistemaSolar[planeta3].temperatura} ºC</p>
+            `;
+        }
+
+    </script>
+
+</html>
