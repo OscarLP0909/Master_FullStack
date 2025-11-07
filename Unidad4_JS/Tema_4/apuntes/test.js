@@ -50,11 +50,41 @@ function saludo2(nombre) {
     console.log("¿Como estás " + nombre + "?")
 }
 
-datosUsuario("Luis", saludar) // De segundo arg le estamos pasando una funcion y de tercer arg
+datosUsuario("Luis", saludar) // De segundo arg le estamos pasando una funcion
 
 
 console.log("Inicio")
 
-setTimeout(()=>{console.log("Estoy procesando")}, 2000)
+setTimeout(() => { console.log("Estoy procesando") }, 2000)
 
 console.log("Fin")
+
+let promesa = new Promise((resolve, reject) => {  // Resolve: cumple la promesa   Reject: fallar la promesa
+    if (2 + 3 == 4) {
+        resolve("todo guay")
+    } else {
+        reject("Todo mal")
+    }
+})
+
+promesa.then((respuesta) => { console.log(respuesta) })
+    .catch((error) => { console.log(error) })
+    .then(() => { console.log("pues ya estaría") }) // Este se va a cumplir siempre y no depende de que la promesa falle
+// .catch((error) => { console.log("Todo se pudrió") }) // Nunca se va a ejecutar
+
+
+// Funciones asincronas
+async function llamarDatos(usr) {
+    try {
+        const llamada1 = await api1(usr) // Espera a que los datos lleguen
+        console.log("patata") // Se ejecuta sin esperar a nada
+        const llamadaFinal = await api2(llamada1)
+        let alfalfa = 2+3 // Se ejecuta sin esperar a nada
+        const imprimir = await imprimir(llamadaFinal)
+
+        console.log(imprimir)
+
+    } catch (error) {
+        console.error(error)
+    }
+}
