@@ -39,8 +39,9 @@ async function calcularTotal() {
 
 async function procesarPago(total) {
     return new Promise((resolve, reject) => {
+        const exito = Math.random() > 0.2
         setTimeout(() => {
-            if(total) {
+            if(exito) {
                 resolve(`Pago procesado correctamente: ${total}`)
             } else {
                 reject(`Error al procesar el pago`)

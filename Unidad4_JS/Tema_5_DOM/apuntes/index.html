@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="patata">Texto
+        <p class="texto">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum dignissimos ipsum excepturi incidunt velit suscipit impedit voluptates exercitationem. Tempora officia facilis facere commodi deleniti quo esse optio aperiam magnam? Assumenda!
+            Est, non. Vel, pariatur. Iusto a quaerat accusantium veritatis! Doloribus fuga accusamus dolorum similique officiis alias exercitationem illo, nihil, quaerat maiores animi fugit facilis, commodi placeat? Maxime iste neque ipsa?
+        </p>
+        <p class="texto">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa praesentium vitae error eveniet nobis natus dolor, molestiae, dicta architecto sint quos sit reprehenderit modi maxime ut quidem unde, nam pariatur?
+            Fuga quos unde error eligendi ipsum inventore ipsam veniam esse corrupti itaque, asperiores reprehenderit quam! Maxime perferendis sapiente sed aut! Ex, in sapiente. Ullam consequatur doloremque laborum dolor quibusdam ipsa.
+        </p>
+    </div>
+    <script>
+        const patata = document.getElementById("patata")
+        console.log(patata.textContent)
+        patata.style.backgroundColor = 'lightblue'
+
+        const ejemplo = document.querySelectorAll(".texto")
+        console.log(ejemplo[0].textContent)
+
+        // const nuevoElemento = document.createElement("p")
+        // nuevoElemento.textContent = "hola mundo"
+        // patata.appendChild(nuevoElemento)
+        // console.log(nuevoElemento)
+
+        function crearElemento(div, p) {
+            const pa = document.getElementById(div)
+            const hi = document.createElement(p)
+            hi.textContent = "Parrafo mediante funcion"
+            pa.appendChild(hi)
+        }
+
+        crearElemento("patata", "p")
+
+    </script>
+</body>
+</html>
