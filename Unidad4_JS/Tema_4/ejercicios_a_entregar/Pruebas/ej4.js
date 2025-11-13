@@ -55,7 +55,7 @@ async function checkout() {
         console.log(agregar)
         const total = await calcularTotal()
         console.log(total)
-        const pago = await procesarPago(total)
+        const pago = await procesarPago(total + "€")
         console.log(pago)
     } catch(error) {
         console.log(error)
