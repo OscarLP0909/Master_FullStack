@@ -1,0 +1,64 @@
+<!-- Crea una página web usando JS con su Header (con tres enlaces), su Main(con tres divs, dentro de cada div podéis meter lo que
+queráis por ejemplo una noticia) y su Footer (con un enlace al inicio de la página). Los enlaces del Header nos deberían llevar
+cada uno a uno de los divs. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7</title>
+</head>
+<body>
+    <header id="header">
+
+    </header>
+    <main id="main">
+        <div id="div1"></div>
+        <div id="div2"></div>
+        <div id="div3"></div>
+    </main>
+    <footer id="footer"></footer>
+    <script>
+        const head = document.getElementById("header")
+        const main = document.getElementById("main")
+        const div1 = document.getElementById("div1")
+        const div2 = document.getElementById("div2")
+        const div3 = document.getElementById("div3")
+        const foot = document.getElementById("footer")
+
+        head.innerHTML = `
+        <a href = #div1>DIV 1</a>
+        <a href = #div2>DIV 2</a>
+        <a href = #div3>DIV 3</a>
+        `
+        div1.innerHTML = `
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt vel quasi laboriosam, quo illum quibusdam cupiditate velit odit est. Porro inventore, assumenda maxime numquam optio eligendi fugiat mollitia minima quo.
+        Numquam nulla voluptates fugit! Dolore debitis quas numquam reiciendis aliquam deserunt architecto molestias nisi, qui porro veritatis dolorem asperiores non incidunt obcaecati optio aut molestiae velit inventore repellat! Possimus, numquam?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt vel quasi laboriosam, quo illum quibusdam cupiditate velit odit est. Porro inventore, assumenda maxime numquam optio eligendi fugiat mollitia minima quo.
+        Numquam nulla voluptates fugit! Dolore debitis quas numquam reiciendis aliquam deserunt architecto molestias nisi, qui porro veritatis dolorem asperiores non incidunt obcaecati optio aut molestiae velit inventore repellat! Possimus, numquam?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt vel quasi laboriosam, quo illum quibusdam cupiditate velit odit est. Porro inventore, assumenda maxime numquam optio eligendi fugiat mollitia minima quo.
+        Numquam nulla voluptates fugit! Dolore debitis quas numquam reiciendis aliquam deserunt architecto molestias nisi, qui porro veritatis dolorem asperiores non incidunt obcaecati optio aut molestiae velit inventore repellat! Possimus, numquam?
+        `
+        div2.innerHTML = `
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt vel quasi laboriosam, quo illum quibusdam cupiditate velit odit est. Porro inventore, assumenda maxime numquam optio eligendi fugiat mollitia minima quo.
+        Numquam nulla voluptates fugit! Dolore debitis quas numquam reiciendis aliquam deserunt architecto molestias nisi, qui porro veritatis dolorem asperiores non incidunt obcaecati optio aut molestiae velit inventore repellat! Possimus, numquam?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt vel quasi laboriosam, quo illum quibusdam cupiditate velit odit est. Porro inventore, assumenda maxime numquam optio eligendi fugiat mollitia minima quo.
+        Numquam nulla voluptates fugit! Dolore debitis quas numquam reiciendis aliquam deserunt architecto molestias nisi, qui porro veritatis dolorem asperiores non incidunt obcaecati optio aut molestiae velit inventore repellat! Possimus, numquam?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt vel quasi laboriosam, quo illum quibusdam cupiditate velit odit est. Porro inventore, assumenda maxime numquam optio eligendi fugiat mollitia minima quo.
+        Numquam nulla voluptates fugit! Dolore debitis quas numquam reiciendis aliquam deserunt architecto molestias nisi, qui porro veritatis dolorem asperiores non incidunt obcaecati optio aut molestiae velit inventore repellat! Possimus, numquam?
+        `
+        div3.innerHTML = `
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt vel quasi laboriosam, quo illum quibusdam cupiditate velit odit est. Porro inventore, assumenda maxime numquam optio eligendi fugiat mollitia minima quo.
+        Numquam nulla voluptates fugit! Dolore debitis quas numquam reiciendis aliquam deserunt architecto molestias nisi, qui porro veritatis dolorem asperiores non incidunt obcaecati optio aut molestiae velit inventore repellat! Possimus, numquam?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt vel quasi laboriosam, quo illum quibusdam cupiditate velit odit est. Porro inventore, assumenda maxime numquam optio eligendi fugiat mollitia minima quo.
+        Numquam nulla voluptates fugit! Dolore debitis quas numquam reiciendis aliquam deserunt architecto molestias nisi, qui porro veritatis dolorem asperiores non incidunt obcaecati optio aut molestiae velit inventore repellat! Possimus, numquam?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt vel quasi laboriosam, quo illum quibusdam cupiditate velit odit est. Porro inventore, assumenda maxime numquam optio eligendi fugiat mollitia minima quo.
+        Numquam nulla voluptates fugit! Dolore debitis quas numquam reiciendis aliquam deserunt architecto molestias nisi, qui porro veritatis dolorem asperiores non incidunt obcaecati optio aut molestiae velit inventore repellat! Possimus, numquam?
+        `
+        foot.innerHTML = `
+        <a href = #header>INICIO</a>
+        Copyright`
+    </script>
+</body>
+</html>
