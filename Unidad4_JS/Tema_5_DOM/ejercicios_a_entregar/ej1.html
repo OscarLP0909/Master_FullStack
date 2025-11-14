@@ -1,0 +1,22 @@
+<!-- Crea un título y un párrafo en un archivo JS y haz que aparezcan en pantalla -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="ejercicio">
+
+    </div>
+    <script>
+        const padre = document.getElementById("ejercicio")
+        padre.innerHTML = `
+        <h1>Esto es el titulo</h1>
+        <p>Esto es un párrafo</p>
+        `
+    </script>
+</body>
+</html>

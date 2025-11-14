@@ -1,0 +1,76 @@
+<!-- Crea un programa que te pregunte qué operación deseas realizar (Suma, Resta, Multiplicación, División y Resto). Después te
+pedirá dos números y aparecerán los dos números introducidos y el resultado de la operación de forma visual -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="ej6">
+
+    </div>
+    <script>
+        const padre = document.getElementById("ej6")
+        const num1 = Number(prompt(`Introduzca un número: `))
+        const num2 = Number(prompt(`Introduzca otro número: `))
+        const eleccion = Number(prompt(`Elija la operacion que desea realizar:
+        1. Suma
+        2. Resta
+        3. Multiplicacion
+        4. División
+        5. Resto`))
+
+        switch(eleccion) {
+            case 1:
+                const suma = num1 + num2
+                padre.innerHTML = `<h1>Suma</h1>
+                <p>La suma de ${num1} y de ${num2} es de ${suma}</p>`
+                padre.style.backgroundColor = "red"
+                padre.style.color = "white"
+            break
+            case 2:
+                const resta = num1 - num2
+                padre.style.backgroundColor = "blue"
+                padre.style.color = "white"
+                padre.innerHTML = `
+                <h1>Resta</h1>
+                <p>La resta de ${num1} y de ${num2} es de ${resta}</p>
+                `
+                break
+            case 3:
+                const multi = num1 * num2
+                padre.style.backgroundColor = "green"
+                padre.style.color = "black"
+                padre.innerHTML = `
+                <h1>Multiplicacion</h1>
+                <p>La multiplicación entre ${num1} por ${num2} es de ${multi}
+                `
+                break
+            case 4:
+                const division = num1 / num2
+                padre.style.backgroundColor = "yellow"
+                padre.style.color = "black"
+                padre.innerHTML = `
+                <h1>Division</h1>
+                <p>La division entre ${num1} y ${num2} es de ${division}
+                `
+                break
+            case 5:
+                const resto = num1 % num2
+                padre.style.backgroundColor = "purple"
+                padre.style.color = "white"
+                padre.innerHTML = `
+                <h1>Resto</h1>
+                <p>El resto entre ${num1} y ${num2} es de ${resto}</p>
+                `
+                break
+            default:
+                padre.innerHTML = `<h1>Introduzca una eleccion valida entre 1 y 5</h1>`
+
+        }
+    </script>
+</body>
+</html>

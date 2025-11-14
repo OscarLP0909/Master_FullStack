@@ -1,0 +1,21 @@
+<!-- Crea una variable con tu nombre. Después haz un párrafo que diga “Hola, me llamo (tu nombre)”. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="ej2">
+
+    </div>
+    <script>
+        const nombre = "Oscar"
+        const padre = document.getElementById("ej2")
+        padre.innerHTML = `
+        <p>Hola, me llamo ${nombre}`
+    </script>
+</body>
+</html>

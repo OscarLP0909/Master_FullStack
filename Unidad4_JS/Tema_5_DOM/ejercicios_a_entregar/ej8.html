@@ -1,0 +1,56 @@
+<!-- Escribe un programa para una empresa de alquiler de coches. Tendremos que preguntar al usuario la edad. Si el usuario es
+menor de 18, no podrá alquilar un vehículo y se lo diremos en pantalla. En caso de ser mayor de edad, le preguntamos si tiene
+carnet de conducir. Si la respuesta es negativa, no podrá alquilar un coche y se lo advertiremos por pantalla. Si es mayor de
+edad le pediremos tanto nombre como apellido , ciudad de recogida del vehículo y número de días que quiere alquilar el coche
+(el alquiler del coche por día tiene un coste de 25 euros y en caso que lo alquile una semana, el coste será de 150 euros).
+Imprimir por pantalla los datos del cliente que vaya a alquilar el coche y el coste total del alquiler. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8</title>
+</head>
+<body>
+    <div id="ej8">
+
+    </div>
+    <script>
+        const padre = document.getElementById("ej8")
+        const edad = Number(prompt(`Introduzca la edad: `))
+        
+        if(edad < 18) {
+            padre.innerHTML = `
+            <h1>Eres menor de edad, no puedes alquilar</h1>
+            `
+        } else {
+        const tieneCarnet = prompt(`¿Tienes carnet de conducir?`).toLowerCase()
+        if (tieneCarnet === "no") {
+            padre.innerHTML = `
+            <h1>No puedes alquilar el coche</h1>`
+        } else {
+        const apellido = prompt(`Introduzca su apellido: `)
+        const ciudad = prompt(`Introduzca la ciudad: `)
+        const numDias = Number(prompt(`Introduzca el número de días: `))
+        let precioTotal = 0
+        if (numDias === 7) {
+            precioTotal = 150
+        } else {
+            precioTotal = 25 * numDias
+        }
+        padre.innerHTML = `
+        <h1>Datos del cliente</h1>
+        <ul>
+            <li>Apellido: ${apellido} </li>
+            <li>Edad: ${edad}</li>
+            <li>Ciudad de Recogida: ${ciudad}</li>
+            <li>Número de días: ${numDias}
+        </ul>
+        <h2>Coste total del alqiler</h2>
+        <p>${precioTotal}€</p>`
+    }
+}
+    </script>
+</body>
+</html>
