@@ -1,3 +1,4 @@
+// Array SistemaSolar
 let sistemaSolar = [
     {
         nombre: "mercurio",
@@ -72,20 +73,25 @@ let sistemaSolar = [
     },
 ];
 
+// Pedimos al usuario los 3 planetas
 let planeta1 = prompt(`Introduzca el primer planeta: `).toLowerCase()
 let planeta2 = prompt(`Introduzca el segundo planeta: `).toLowerCase()
 let planeta3 = prompt(`Introduzca el tercer planeta: `).toLowerCase()
 
+// Guardamos en una variable el planeta escrito y que se encuentre dentro del array
 let planetaEncontrado1 = sistemaSolar.find((p) => p.nombre === planeta1)
 let planetaEncontrado2 = sistemaSolar.find((p) => p.nombre === planeta2)
 let planetaEncontrado3 = sistemaSolar.find((p) => p.nombre === planeta3)
 
+// Si existe en el array
 if (planetaEncontrado1 === undefined || planetaEncontrado2 === undefined || planetaEncontrado3 === undefined) {
     alert(`Introduzca un planeta válido`)
+    // Si se repite alguno
 } else if (planeta1 === planeta2 || planeta2 === planeta3 || planeta1 === planeta3) {
     alert(`No introduzca planetas anteriormente escritos`)
 } else {
-    
+
+    // Funcion para crear el HTML sin necesidad de escribirlo 3 veces
     function mostrarPlaneta(planetaEncontrado, divId){
         let div = document.getElementById(divId)
         div.innerHTML = `
@@ -100,6 +106,8 @@ if (planetaEncontrado1 === undefined || planetaEncontrado2 === undefined || plan
             div.style.backgroundColor = planetaEncontrado.fondo
         })
     }
+
+    // Ejecutar funcion para crear los 3 divs de los 3 planetas que se piden
     mostrarPlaneta(planetaEncontrado1, "planeta1")
     mostrarPlaneta(planetaEncontrado2, "planeta2")
     mostrarPlaneta(planetaEncontrado3, "planeta3")
