@@ -307,12 +307,12 @@ let personas = [
     },
 ];
 
-function nuevoObjeto (personas) {
+function nuevoObjeto(personas) {
     let resultado = [];
 
     personas.forEach(p => {
         let obj = {
-            nombre : p.name,
+            nombre: p.name,
             imagen: p.picture,
             edad: p.age,
             email: p.email,
@@ -321,7 +321,7 @@ function nuevoObjeto (personas) {
         }
         resultado.push(obj)
     });
-    
+
 
     return resultado
 }
@@ -329,6 +329,8 @@ function nuevoObjeto (personas) {
 
 
 let personasLimpias = nuevoObjeto(personas);
+
+// Primera parte del ejercicio
 
 // let primeraPersona = personasLimpias[0]
 let persona = document.getElementById("persona")
@@ -363,18 +365,44 @@ let persona = document.getElementById("persona")
 // }
 
 
-// Pedimos al usuario que introduzca un texto
+// Segunda parte del ejercicio: Pedimos al usuario que introduzca un texto
 
-let textoUsuario = prompt(`Introduzca el texto para buscar: `).toLowerCase()
+// let textoUsuario = prompt(`Introduzca el texto para buscar: `).toLowerCase()
 
-let resultado = personasLimpias.filter(p =>
-    p.nombre.toLowerCase().includes(textoUsuario)
-)
+// let resultado = personasLimpias.filter(p =>
+//     p.nombre.toLowerCase().includes(textoUsuario)
+// )
 
-persona.innerHTML = "";
+// persona.innerHTML = "";
 
-resultado.forEach(p => {
-    persona.innerHTML += `
+// resultado.forEach(p => {
+//     persona.innerHTML += `
+//     <h1>Nombre: ${p.nombre}</h1>
+//     <img src="${p.imagen}">
+//     <p>Edad: ${p.edad}</p>
+//     <p>Email: ${p.email}</p>
+//     <p>Direccion: ${p.direccion}</p>
+//     <p>Color de los ojos: ${p.colorOjos}</p>
+//     `
+// })
+
+
+// Tercera parte del ejercicio: Mostrar una caja de texto y un boton, al presionar el botón se muestran los nombres de aquellas personas cuyo nombre contenga el texto escrito. Al volver a hacer click, se muestran una vez mas las personas como antes, en caso de que esté vacío, mostramos todas las personas.
+
+
+
+let boton = document.getElementById("boton")
+let input = document.getElementById("texto")
+
+boton.addEventListener("click", (() => {
+    persona.innerHTML = "";
+
+    let filtrado = personasLimpias.filter(p =>
+        p.nombre.toLowerCase().includes(input.value.toLowerCase())
+    )
+    if(filtrado.length > 0) {
+    filtrado.forEach(p => {
+        persona.innerHTML += `
     <h1>Nombre: ${p.nombre}</h1>
     <img src="${p.imagen}">
     <p>Edad: ${p.edad}</p>
@@ -382,4 +410,22 @@ resultado.forEach(p => {
     <p>Direccion: ${p.direccion}</p>
     <p>Color de los ojos: ${p.colorOjos}</p>
     `
-})
+    document.body.style.backgroundColor = p.colorOjos
+    })
+    
+
+} else {
+    persona.innerHTML = "";
+    personasLimpias.forEach(p => {
+        persona.innerHTML += `
+    <h1>Nombre: ${p.nombre}</h1>
+    <img src="${p.imagen}">
+    <p>Edad: ${p.edad}</p>
+    <p>Email: ${p.email}</p>
+    <p>Direccion: ${p.direccion}</p>
+    <p>Color de los ojos: ${p.colorOjos}</p>
+    `
+    })
+
+}
+}))
