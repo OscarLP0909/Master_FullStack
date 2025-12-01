@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+        .card {
+            /* Add shadows to create the "card" effect */
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+        }
+
+        /* On mouse-over, add a deeper shadow */
+        .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        /* Add some padding inside the card container */
+        .container {
+            padding: 2px 16px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lista {
+          list-style-type: disc;
+          padding: 2px 16px;
+          display: flex;
+          flex-flow: column nowrap;
+          align-items: baseline;
+          justify-content: baseline;
+        }
+    </style>
+  <body>
+    <script>
+      //Disney: Usa la api https://api.disneyapi.dev/characters/xxx para pedir un personaje aleatorio pasándole un número entre 001 y
+      // 500 en vez del xxx.. Crea un div en el que aparezca la foto, el nombre y el id. Si estuviera disponible, enumerar las películas
+      // donde ha salido
+
+      // Iniciamos función Iniciar()
+      function iniciar() {
+
+        // Pedimos un número al usaurio que esté entre 1 y 500
+        let numeroUsuario = Number(
+          prompt("Introduzca un número entre 1 y 500")
+        );
+
+        if (numeroUsuario < 1 || numeroUsuario > 500) {
+          alert("Número no dentro del rango");
+          return;
+        }
+        console.log(numeroUsuario);
+        fetch(`https://api.disneyapi.dev/characters/${numeroUsuario}`)
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data.data);
+            crearElemento(data.data);
+            document.body.appendChild(caja);
+          });
+      }
+
+      // creamos el div
+      const caja = document.createElement("div");
+
+      // Creamos funcion para crear el HTML
+      function crearElemento(personaje) {
+        caja.innerHTML = `
+        <img src="${personaje.imageUrl}" alt="Personaje" width = "250px" height = "250px">
+        <h1>${personaje.name}</h1>
+        <p>ID: ${personaje._id}</p>
+        <h4>Películas</h4>
+    `;
+
+      const listaPelis = document.createElement("ul");
+
+        personaje.films.forEach(p => {
+          const item = document.createElement("li")
+          item.textContent = p
+          listaPelis.appendChild(item)
+        })
+
+    caja.appendChild(listaPelis)
+    listaPelis.classList.add("lista")
+    caja.classList.add("container")
+    caja.classList.add("card")
+      }
+
+      iniciar(); // <-- ejecutamos la función principal
+    </script>
+  </body>
+</html>

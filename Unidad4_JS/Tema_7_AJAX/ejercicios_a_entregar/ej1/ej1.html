@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+    <style>
+        .card {
+            /* Add shadows to create the "card" effect */
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+        }
+
+        /* On mouse-over, add a deeper shadow */
+        .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        /* Add some padding inside the card container */
+        .container {
+            padding: 2px 16px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejercicio 1</h1>
+    <button id="boton">Pedir Libros</button>
+    <div id="respuesta" class="container card"></div>
+    <script src="ejercicio_1.js"></script>
+</body>
+</html>
