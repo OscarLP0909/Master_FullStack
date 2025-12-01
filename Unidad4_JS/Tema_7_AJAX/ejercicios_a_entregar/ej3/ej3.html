@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .card {
+            /* Add shadows to create the "card" effect */
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+        }
+
+        /* On mouse-over, add a deeper shadow */
+        .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .card img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Add some padding inside the card container */
+        .container {
+            padding: 2px 16px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+</style>
+<body>
+    <input type="text" name="text" id="numero" placeholder="Introduzca un número">
+    <button id="boton">Enviar</button>
+    <script>
+        function iniciar() {
+
+            const boton = document.getElementById("boton")
+            
+            const caja = document.createElement("div")
+
+            boton.addEventListener("click", () => {
+
+                const numeroUsuario = document.getElementById("numero").value
+                
+                console.log(numeroUsuario)
+                
+                if(numeroUsuario <= 0) {
+                    alert(`Tiene que introducir un número mayor que 0`)
+                    return
+                }
+
+                // Utilizamos una proxy temporal para poder conectarnos a la API, no requiere registro
+                fetch(`https://api.allorigins.win/raw?url=https://xkcd.com/${numeroUsuario}/info.0.json`)
+                    .then((res) => res.json())
+                    .then((data) => {
+                        console.log(data)
+                        mostrarDatos(data)
+                        document.body.appendChild(caja)
+                    }
+            )
+                
+
+                function mostrarDatos(comic) {
+                    caja.innerHTML = "";
+                    caja.innerHTML = `
+                    <img src="${comic.img}" alt="Portada Comic">
+                    <h2>${comic.title}</h2>
+                    <p>Número del cómic: ${comic.num}</p>
+                    <p>Fecha publicación: ${comic.day + "/" + comic.month + "/" + comic.year}</p>
+                    `
+                }
+
+                caja.classList.add("container")
+                caja.classList.add("card")
+            }
+    )}
+
+    iniciar()
+    </script>
+</body>
+</html>
