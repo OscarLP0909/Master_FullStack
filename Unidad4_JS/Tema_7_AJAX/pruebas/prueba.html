@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Prueba</title>
+</head>
+<style>
+    #divInfo {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .poke-card {
+        width: 140px;
+        /* Tamaño estándar */
+        background: #ffffff;
+        /* Fondo claro */
+        border-radius: 12px;
+        /* Bordes redondeados */
+        padding: 10px;
+        /* Espaciado interno */
+        text-align: center;
+        /* Centrar contenido */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        /* Sombra suave */
+        transition: transform 0.2s;
+        /* Animación al pasar el ratón */
+    }
+
+    .poke-card:hover {
+        transform: scale(1.05);
+        /* Efecto hover elegante */
+    }
+
+    .poke-card img {
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
+        /* Mantiene proporción */
+    }
+
+    .poke-card p {
+        font-size: 14px;
+        margin-top: 8px;
+        font-weight: bold;
+        text-transform: capitalize;
+        /* Para que los nombres salgan bonitos */
+    }
+</style>
+
+<body>
+    <script src="script.js"></script>
+</body>
+
+</html>
