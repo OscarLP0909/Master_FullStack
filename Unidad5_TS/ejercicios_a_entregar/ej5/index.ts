@@ -16,4 +16,4 @@ function dateHumano(date: fecha): void {
     console.log(`${nombreDia}, ${numeroDia} de ${nombreMes}`)
 }
 
-dateHumano("02/10")
+dateHumano("02/10") // Formato MM/dd
