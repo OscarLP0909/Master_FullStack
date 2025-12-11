@@ -3,7 +3,7 @@
 let categoriaFinal = "No especificada";
 function processProduct(product) {
     if (typeof product === "string") {
-        console.log(`Producto sin datos ${product}`);
+        console.log(`Producto sin datos: ${product}`);
     }
     else {
         if (product.name === '' || product.price < 0) {
