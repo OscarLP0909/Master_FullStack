@@ -10,7 +10,7 @@ const yo: Person = {
     city: "Malaga"
 }
 
-function getPersonInfo (currentYear: number, persona: Person) {
+function getPersonInfo(currentYear: number, persona: Person): void {
     let edad: number
 
     const anio: number = persona.birthYear
