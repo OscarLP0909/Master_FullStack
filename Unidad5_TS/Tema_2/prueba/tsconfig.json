@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "target": "ES6",
+        "strict": true,
+        "noImplicitAny": true,
+        "declaration": true,
+        "removeComments": true,
+        "declarationDir": "./dist/types",
+        "outDir": "./dist"
+    },
+    "include": ["./src/*"],
+    "exclude": ["./node_modules"]
+}

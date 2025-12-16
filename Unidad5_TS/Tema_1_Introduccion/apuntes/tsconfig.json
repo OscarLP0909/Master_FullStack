@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "noEmitOnError": false,
+        "declaration": true,
+        "strict": true,
+        "noImplicitAny": true,
+        "outDir": "./dist",
+        "removeComments": true
+    },
+}
