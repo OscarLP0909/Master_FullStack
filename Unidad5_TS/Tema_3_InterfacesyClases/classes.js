@@ -1,4 +1,4 @@
- class Producto {
+class Producto {
 	// Propiedades
 	// name;
 	// price;
